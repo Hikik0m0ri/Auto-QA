@@ -1,4 +1,4 @@
-package AppleInsider;
+package appleInsider;
 
 import com.codeborne.selenide.ElementsCollection;
 

@@ -1,4 +1,4 @@
-package AppleInsider;
+package appleInsider;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

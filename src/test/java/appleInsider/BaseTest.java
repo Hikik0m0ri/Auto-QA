@@ -1,4 +1,4 @@
-package AppleInsider;
+package appleInsider;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
