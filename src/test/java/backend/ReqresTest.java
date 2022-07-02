@@ -1,4 +1,4 @@
-package api;
+package backend;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -21,7 +21,7 @@ public class ReqresTest {
     public void checkUserAvatarAndIdTest() {
         Specifications.installSpecification(Specifications.requestSpec(URL), Specifications.responseOK200());
         List<UserData> users = given().when()
-                .get("api/users?page=2")
+                .get("backend/users?page=2")
                 .then().log().all()
                 .extract().body().jsonPath().getList("data", UserData.class);
 
