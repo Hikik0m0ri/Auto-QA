@@ -15,19 +15,19 @@ public class Specifications {
                 .build();
     }
 
-    public static ResponseSpecification responseOK200(){
+    public static ResponseSpecification responseOK200() {
         return new ResponseSpecBuilder()
                 .expectStatusCode(200)
                 .build();
     }
 
-    public static ResponseSpecification responseError400(){
+    public static ResponseSpecification responseError400() {
         return new ResponseSpecBuilder()
                 .expectStatusCode(400)
                 .build();
     }
 
-    public static void installSpecification(RequestSpecification request, ResponseSpecification response){
+    public static void installSpecification(RequestSpecification request, ResponseSpecification response) {
         RestAssured.requestSpecification = request;
         RestAssured.responseSpecification = response;
     }
