@@ -1,13 +1,13 @@
 package backend.storage;
 
-public enum USERS {
+public enum USER {
     EMAIL("eve.holt@reqres.in"),
-    BADEMAIL("sydney@fife"),
+    BAD_EMAIL("sydney@fife"),
     PASSWORD("pistol");
 
     private String user;
 
-    USERS(String user) {
+    USER(String user) {
         this.user = user;
     }
 
