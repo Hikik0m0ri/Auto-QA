@@ -1,4 +1,4 @@
-package backend;
+package backend.spec;
 
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
@@ -18,6 +18,12 @@ public class Specifications {
     public static ResponseSpecification responseOK200(){
         return new ResponseSpecBuilder()
                 .expectStatusCode(200)
+                .build();
+    }
+
+    public static ResponseSpecification responseError400(){
+        return new ResponseSpecBuilder()
+                .expectStatusCode(400)
                 .build();
     }
 

@@ -1,4 +1,4 @@
-package backend;
+package backend.user;
 
 public class UserData {
     private Integer id;
