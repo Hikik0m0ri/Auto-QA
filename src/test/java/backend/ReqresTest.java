@@ -19,11 +19,6 @@ import static backend.storage.API.BASEURL;
 import static io.restassured.RestAssured.given;
 
 public class ReqresTest {
-    /**
-     * 1. Получить список пользователей со второй страница на сайте https://reqres.in/
-     * a. Убедиться что id пользователей содержаться в их avatar;
-     * b. Убедиться, что email пользователей имеет окончание reqres.in;
-     */
     @Test
     @DisplayName("Аватары содержат ID пользователей")
     public void checkUserAvatarAndIdTest() {
@@ -38,12 +33,6 @@ public class ReqresTest {
         Assertions.assertTrue(users.stream().allMatch(x -> x.getEmail().endsWith("@reqres.in")));
     }
 
-    /**
-     * 2. Используя сервис https://reqres.in/ протестировать регистрацию.
-     * a. Убедиться, что регистрация успешна.
-     * b. Убедиться, что при отсутствии пароля регистрация не успешна.
-     * Проверять коды ошибок.
-     */
     @Test
     @DisplayName("Успешная регистрация")
     public void successUserRegTest() {
@@ -76,9 +65,7 @@ public class ReqresTest {
         Assertions.assertEquals("Missing password", unSuccessReg.getError());
     }
 
-    /**
-     * Используя сервис https://reqres.in/ убедиться, что операция List возвращает данные отсортированные по годам.
-     */
+
     @Test
     @DisplayName("Список цветов предоставляется отсортированным по годам")
     public void sortedColorsYearsTest(){
